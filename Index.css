@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ 
+    color: black;
+    background: #ad5389; 
+background: -webkit-linear-gradient(to right, #a31bec, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #630e91, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 4rem;
+    height: 100vh;
+}
+
+.container{
+    border-radius: 20px;
+    
+    position: relative;
+    display: block;
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 254, 254, 0.7),
+        rgba(255, 251, 251, 0.3)
+      );
+}
+
+
+button{
+    border: none;
+    padding: 0.7rem 2rem;
+    position:absolute;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #EF629F;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 1px 2rem;
+    bottom: 20px;
+
+    
+}
+.right{
+    position: absolute;
+    right: -90px;
+    border-width: 20px 0px 20px 30px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-right: 30px;
+    border-color: transparent transparent transparent #fff;
+    /* transition: 0.5s; */
+}
+.left{
+    position: absolute;
+    left: -90px;
+    border-width: 20px 30px 20px 0px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-right: 30px;
+    
+    border-color: transparent #fff transparent transparent;
+ 
+}
+#prevbtn{
+    left: 0%;
+}
+#nextbtn{
+    right: 0px;
+}
+
+li{
+    list-style: none;
+    font-size: 1.4em;
+    cursor: pointer;
+
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    border-radius: 3px;
+    transition: 0.2s ease;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.submitBtn{
+    position: relative;
+    top: 10%;
+    background: #b6b45b;
+    text-decoration: line-through;
+    cursor: none;
+    
+}
+
+.optionDiv{
+    margin-top: .5rem;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.Result{
+    font-size: 4rem;
+    display: none;
+}
+.Result p{
+    font-size: 2rem;
+}
