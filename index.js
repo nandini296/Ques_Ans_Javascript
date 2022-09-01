@@ -1,19 +1,7 @@
 // Button
 let right = document.getElementById("nextbtn");
-right.addEventListener("mouseover", () => {
-  document.querySelector("#rightdiv").classList.add("right");
-});
-right.addEventListener("mouseout", () => {
-  document.querySelector("#rightdiv").classList.remove("right");
-});
 
 let left = document.getElementById("prevbtn");
-left.addEventListener("mouseover", () => {
-  document.querySelector("#leftdiv").classList.add("left");
-});
-left.addEventListener("mouseout", () => {
-  document.querySelector("#leftdiv").classList.remove("left");
-});
 
 
 // Questions
@@ -144,6 +132,7 @@ function NextQuestion(i){
   clickColorChange();
   clickedAnswer(currentQuestion);
 }
+
 right.addEventListener("click", () => {
   if(currentQuestion >= ques.length)
   {
@@ -224,8 +213,9 @@ function clickColorChange()
   // console.log(currentQuestion," correct u");
   for(let i =0;i<listElements.length;i++)
   {
-      listElements[i].addEventListener("click",()=>{
-          listElements[i].style.background = "#185a9d";
+          listElements[i].addEventListener("click",()=>{
+          listElements[i].style.background = "#141E30";
+          listElements[i].style.color = "white";
 
           ques[currentQuestion].color = i;
          
@@ -237,13 +227,12 @@ function clickColorChange()
           else{
             checkAnswer[currentQuestion] = 0;
           }
-    
-       
           for(let j=0 ;j<listElements.length;j++)
           {
               if(i!=j)
               {
                       listElements[j].style.background = "transparent";
+                      listElements[j].style.color = "black";
               }
               else{
                 continue;
@@ -253,6 +242,7 @@ function clickColorChange()
       });
   }
 }
+
 function submit()
 {
   if(currentQuestion >=ques.length)
@@ -306,7 +296,9 @@ function clickedAnswer(current)
   let i = ques[current].color;
   if(ques[current].color!=-1)
   {
-    listElements[i].style.background = "#185a9d";
+    listElements[i].style.background = "#141E30";
+    listElements[i].style.color = "white";
   }
 }
+
 
